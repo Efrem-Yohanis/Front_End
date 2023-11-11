@@ -14,6 +14,8 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import OtherHousesIcon from '@mui/icons-material/OtherHouses';
 import { amber,blue,orange } from '@mui/material/colors';
+import { useState } from 'react';
+// import allData from './function/addData'
 
 const theme = createTheme({
   palette: {
@@ -35,9 +37,16 @@ export default function SignIn() {
       password: data.get('password'),
     });
   };
+  const [name,setName] = useState("Efrem");
+
+  function loginclick(){
+    
+    setName("Yohanis")
+  }
 
   return (
     <ThemeProvider theme={theme}>
+      <allData />
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <Box
@@ -66,6 +75,7 @@ export default function SignIn() {
               autoComplete="email"
               autoFocus
             />
+            {name}
             <TextField
               margin="normal"
               required
@@ -87,6 +97,7 @@ export default function SignIn() {
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
+              onClick={loginclick}
             >
                 <Typography color="primary" variant='h6' component="h6"> 
                      Sign In

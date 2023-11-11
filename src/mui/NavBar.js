@@ -38,7 +38,9 @@ function NavBar(){
               <Typography sx={{ flexGrow: 1 }}> 
               <Button variant="text" href="/addHouse" sx={{pt:2,color:"primary"}}><Typography color="primary">Add-House</Typography></Button>
               <Button variant="text" href="/searchHouse" sx={{pt:2}}><Typography>Search-House</Typography></Button>
+              <Button variant="text" href="/#" sx={{pt:2}}><Typography>MyPage</Typography></Button>      
               <Button variant="text" href="/contactUs" sx={{pt:2}}><Typography>Countac-Us</Typography></Button>      
+              
               </Typography>
               <IconButton>
                 <Button href='/login'>Logout</Button>
